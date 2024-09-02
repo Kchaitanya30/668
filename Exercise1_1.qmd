@@ -6,10 +6,56 @@ editor: visual
 
 ## 
 
+Why does this code not work? \_\_\_\_
+
 ```         
+
 my_variable <- 10 > 
-#Why does this code not work? ____ 
+
 > my_variable <- 10 > my_varıable Error: object 'my_varıable' not found 
-> # As this code doesn't work because there is a mistake in the object name, I have created a object with my_variable name but I have not createda variable with my_varıable. Slight mistake in the name will show an error. 
+
 > my_variable [1] 10
 ```
+
+As this code doesn't work because there is a mistake in the object name, I have created an object with my_variable name but I have not created a variable with my_varıable. Slight mistake in the name will show an error.
+
+Tweak each of the following R commands so that they run correctly:
+
+```         
+libary(tidyverse) Error in libary(tidyverse) : could not find function "libary" 
+> library(tidyverse) ── Attaching core tidyverse packages ─────────── tidyverse 2.0.0 ── ✔ dplyr     1.1.4     ✔ readr     2.1.5 ✔ forcats   1.0.0     ✔ stringr   1.5.1 ✔ ggplot2   3.5.1     ✔ tibble    3.2.1 ✔ lubridate 1.9.3     ✔ tidyr     1.3.1 ✔ purrr     1.0.2      ── Conflicts ───────────────────────────── tidyverse_conflicts() ── ✖ dplyr::filter() masks stats::filter() ✖ dplyr::lag()    masks stats::lag() ℹ Use the conflicted package to force all conflicts to become errors > 
+```
+
+The correct code is library(tidyverse), The R doesn't recognise if there is a mistake in the code. Earlier it is mentioned as todyverse,so it is showing error.
+
+ggplot(dTA = mpg) +
+geom_point(maping = aes(x = displ y = hwy)) +
+geom_smooth(method = "lm)
+
+There are missing argument words, like data, mapping.
+
+(<https://r4ds.hadley.nz/data-visualize>)
+
+[`ggplot()`](https://ggplot2.tidyverse.org/reference/ggplot.html) function defines how variables in your dataset are mapped to visual properties (**aesthetics**) of your plot. The `mapping` argument is always defined in the [`aes()`](https://ggplot2.tidyverse.org/reference/aes.html) function, and the `x` and `y` arguments of [`aes()`](https://ggplot2.tidyverse.org/reference/aes.html) specify which variables to map to the x and y axes. 
+
+There is a mistake in the code, the mapping argument, x and y variables of aes(), should be added to the ggplot function.
+
+To represent the observations in the data frame, we need to define a geom, for graph geom_point() need is used. To categorize the points, geom_point() is used but there is no attribute. Hence corrected the code.
+
+```         
+ggplot(data = mpg,mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth(method = "lm") `geom_smooth()` using formula = 'y ~ x'
+```
+
+![](images/clipboard-2049572971.png)
+
+Press <kbd>⌥ + ⇧ + K</kbd> or <kbd>⎇ + ⇧ + K</kbd>.
+
+What happens? \_\_\_\_
+
+Pressing alt+shift+k opens the Keyboard Shortcut Quick Response
+
+where the keyboard shortcuts are available.
+
+How can you get to the same place using the menus? \_\_\_\_
+
+Under the Menu bar \> Tools\> Keyboard Shortcuts Help
