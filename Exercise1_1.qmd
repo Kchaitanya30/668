@@ -1,0 +1,15 @@
+---
+title: "Exercise 1"
+format: html
+editor: visual
+---
+
+## 
+
+```         
+my_variable <- 10 > 
+#Why does this code not work? ____ 
+> my_variable <- 10 > my_varıable Error: object 'my_varıable' not found 
+> # As this code doesn't work because there is a mistake in the object name, I have created a object with my_variable name but I have not createda variable with my_varıable. Slight mistake in the name will show an error. 
+> my_variable [1] 10
+```
